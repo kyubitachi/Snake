@@ -1,3 +1,5 @@
+// Axes d'amélioration : Avant de lancer le jeu, faire un menu demandant à l'utilisateur s'il souhaite jouer en mode facile ou difficile (avec ou sans wall collision), et permettre de revenir au menu à tout moment.
+
 window.onload = () => {
     const canvasWidth = 900;
     const canvasHeight = 600;
