@@ -1,4 +1,5 @@
-// Axes d'amélioration : Avant de lancer le jeu, faire un menu demandant à l'utilisateur s'il souhaite jouer en mode facile ou difficile (avec ou sans wall collision), et permettre de revenir au menu à tout moment.
+// Axes d'amélioration : Avant de lancer le jeu, faire un menu demandant à l'utilisateur 
+// s'il souhaite jouer en mode facile ou difficile (avec ou sans wall collision), et permettre de revenir au menu à tout moment.
 
 window.onload = () => {
     const canvasWidth = 900;
@@ -37,7 +38,7 @@ window.onload = () => {
     }
     
     const refreshCanvas = () => {
-        mySnake.advance();
+        mySnake.move();
         if (mySnake.checkCollision()){
             gameOver();
         } else {
@@ -114,7 +115,7 @@ window.onload = () => {
             ctx.restore();
         };
         
-        advance(){
+        move(){
             const nextPosition = this.body[0].slice();
             switch(this.direction){
                 case "left":
